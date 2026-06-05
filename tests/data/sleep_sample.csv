@@ -1,0 +1,6 @@
+id;value;startDate;endDate
+1;HKCategoryValueSleepAnalysisInBed;2025-07-23 22:00:00 +0100;2025-07-23 22:15:00 +0100
+2;HKCategoryValueSleepAnalysisAsleepCore;2025-07-23 22:15:00 +0100;2025-07-23 23:00:00 +0100
+3;HKCategoryValueSleepAnalysisAsleepDeep;2025-07-23 23:00:00 +0100;2025-07-24 00:30:00 +0100
+4;HKCategoryValueSleepAnalysisAsleepREM;2025-07-24 00:30:00 +0100;2025-07-24 01:00:00 +0100
+5;HKCategoryValueSleepAnalysisAwake;2025-07-24 01:00:00 +0100;2025-07-24 01:15:00 +0100

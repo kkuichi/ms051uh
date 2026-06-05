@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "health-dashboard"
+version = "0.1.0"
+description = "Wearable Health Data Dashboard"
+readme = "README.md"
+requires-python = ">=3.11"
+
+
+dependencies = [
+    "streamlit>=1.32",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "plotly>=5.20",
+    "jupyter>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+    "hypothesis>=6.100",
+    "nbclient>=0.10",
+    "mypy>=1.8",
+    "black>=24.1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages]
+find = {where = ["src"]}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--import-mode=importlib"
+
+[tool.coverage.run]
+source = ["src/health_dashboard"]
+omit = ["*/tests/*"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
